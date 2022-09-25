@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login"
+    tools:context=".register"
     android:background="#f4f5f9"
     android:orientation="vertical">
 
@@ -24,54 +24,52 @@
 
             android:layout_height="40dp"
             android:src="@drawable/logotext"></ImageView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="WELCOME !"
-            android:fontFamily="@font/ralewaybold"
-            android:textColor="#393838"
-            android:textSize="30dp"
-            android:gravity="center">
 
-        </TextView>
+
+
+
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Please Login to Continue"
-            android:fontFamily="@font/ralewaylight"
-            android:layout_marginTop="8dp"
-            android:textColor="#393838"
-            android:textSize="18dp"
-            android:gravity="center">
-
-        </TextView>
-
-        <View
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
-            android:background="#fe6e35"
-            android:layout_width = "62dp"
-            android:layout_height="3dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="LOGIN"
+            android:text="REGISTER"
             android:fontFamily="@font/ralewaymedium"
             android:textColor="#393838"
             android:gravity="center"
             android:layout_marginTop="10dp"
             android:textSize="25dp"></TextView>
 
+        <View
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:background="#329962"
+            android:layout_width = "62dp"
+            android:layout_height="3dp"/>
+
         <LinearLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:padding="0dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_modern"
+                android:drawableLeft="@drawable/farmer_svgrepo_com_2"
+                android:drawablePadding="20dp"
+                android:hint="Name"
+                android:textColor="#212121"
+                android:fontFamily="@font/ralewayregular"
+                android:inputType="text"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="10dp" />
+
+            <EditText
+                android:layout_marginTop="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_modern"
@@ -100,6 +98,21 @@
                 android:paddingLeft="12dp"
                 android:paddingTop="10dp" />
 
+            <EditText
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_password"
+                android:drawableLeft="@drawable/lock_svgrepo_com"
+                android:drawablePadding="20dp"
+                android:hint="Re Enter Password"
+                android:textColor="#212121"
+                android:fontFamily="@font/ralewayregular"
+                android:inputType="textPassword"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="10dp" />
+
 
 
             <com.google.android.material.button.MaterialButton
@@ -109,32 +122,13 @@
                 android:textColor="@color/white"
                 android:fontFamily="@font/ralewayblack"
                 android:lineHeight="0dp"
-                android:text="Login"
-                android:backgroundTint="#fe6e35"
+                android:text="Register"
+                android:backgroundTint="#329962"
                 app:cornerRadius="0dp">
 
             </com.google.android.material.button.MaterialButton>
 
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Forgot Your Password? "
-                    android:fontFamily="@font/ralewayregular"
-                    android:textColor="#393838"></TextView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" Reset Here"
-                    android:fontFamily="@font/ralewaybold"
-                    android:textColor="#393838"></TextView>
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_marginTop="10dp"
@@ -145,38 +139,38 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="If You Don't have An Account? "
+                    android:text="If You Already have An Account? "
                     android:fontFamily="@font/ralewayregular"
                     android:textColor="#393838"></TextView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" Register"
+                    android:text=" Login"
                     android:fontFamily="@font/ralewaybold"
                     android:textColor="#393838"></TextView>
             </LinearLayout>
 
 
-<!--            <TextView-->
-<!--                android:layout_marginTop="6dp"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="If You don't have account"-->
-<!--                android:gravity="center"-->
-<!--                android:fontFamily="@font/ralewayregular"></TextView>-->
+            <!--            <TextView-->
+            <!--                android:layout_marginTop="6dp"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="If You don't have account"-->
+            <!--                android:gravity="center"-->
+            <!--                android:fontFamily="@font/ralewayregular"></TextView>-->
 
-<!--            <com.google.android.material.button.MaterialButton-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="60dp"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:fontFamily="@font/ralewayblack"-->
-<!--                android:lineHeight="0dp"-->
-<!--                android:text="Register"-->
-<!--                android:backgroundTint="#329962"-->
-<!--                app:cornerRadius="0dp">-->
+            <!--            <com.google.android.material.button.MaterialButton-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="60dp"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:fontFamily="@font/ralewayblack"-->
+            <!--                android:lineHeight="0dp"-->
+            <!--                android:text="Register"-->
+            <!--                android:backgroundTint="#329962"-->
+            <!--                app:cornerRadius="0dp">-->
 
-<!--            </com.google.android.material.button.MaterialButton>-->
+            <!--            </com.google.android.material.button.MaterialButton>-->
 
         </LinearLayout>
 
@@ -201,5 +195,6 @@
         </ImageView>
 
     </LinearLayout>
+
 
 </LinearLayout>

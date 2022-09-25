@@ -7,6 +7,7 @@
 tools:context=".Dashboard"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="#f4f5f9"
     android:backgroundTint="#f4f5f9">
 
 
