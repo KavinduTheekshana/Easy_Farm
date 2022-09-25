@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
 tools:context=".Dashboard"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:backgroundTint="#f4f5f9">
 
 
     <LinearLayout
