@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#f4f5f9"
+    android:backgroundTint="#f4f5f9">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sarah Alexandra"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:fontFamily="@font/ralewaybold"
+        android:textSize="25dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textColor="#393838"
+        android:layout_marginBottom="25dp"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4">
+
+                <com.google.android.material.card.MaterialCardView
+                 android:id="@+id/btn_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="0dp"
+                    android:backgroundTint="#6c3729"
+                    android:clickable="true">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/back_svgrepo_com">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Back"
+
+                            android:lineSpacingMultiplier="0"
+                            android:lineSpacingExtra="24sp"
+                            android:fontFamily="@font/ralewayblack"
+                            android:textColor="#fff"
+                            android:textSize="40dp"></TextView>
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="0dp"
+                    android:backgroundTint="#329962"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/database_server_svgrepo_com">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Previous"
+
+                            android:lineSpacingMultiplier="0"
+                            android:lineSpacingExtra="24sp"
+                            android:lineHeight="0dp"
+                            android:fontFamily="@font/ralewayblack"
+                            android:textColor="#fff"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Data"
+android:layout_marginTop="-15dp"
+                            android:lineSpacingMultiplier="0"
+                            android:lineSpacingExtra="24sp"
+                            android:fontFamily="@font/ralewayblack"
+                            android:textColor="#fff"
+                            android:textSize="40dp"></TextView>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="0dp"
+                    android:backgroundTint="#5998C5"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/password_svgrepo_com">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Change"
+
+                            android:lineSpacingMultiplier="0"
+                            android:lineSpacingExtra="24sp"
+                            android:lineHeight="0dp"
+                            android:fontFamily="@font/ralewayblack"
+                            android:textColor="#fff"
+                            android:textSize="20dp"></TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Password"
+                            android:layout_marginTop="-15dp"
+                            android:lineSpacingMultiplier="0"
+                            android:lineSpacingExtra="24sp"
+                            android:fontFamily="@font/ralewayblack"
+                            android:textColor="#fff"
+                            android:textSize="30dp"></TextView>
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="0dp"
+                    android:backgroundTint="#ca1e00"
+                    android:clickable="true">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/logout_svgrepo_com_2">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Logout"
+
+                            android:lineSpacingMultiplier="0"
+                            android:lineSpacingExtra="24sp"
+                            android:fontFamily="@font/ralewayblack"
+                            android:textColor="#fff"
+                            android:textSize="40dp"></TextView>
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="bottom">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/grow"
+            android:layout_gravity="bottom"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            >
+
+        </ImageView>
+
+    </LinearLayout>
+
+</LinearLayout>

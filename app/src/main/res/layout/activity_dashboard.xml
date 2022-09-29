@@ -54,7 +54,7 @@ tools:context=".Dashboard"
 
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/camera">
+                        android:src="@drawable/camera_svgrepo_com">
 
                     </ImageView>
 
@@ -101,7 +101,7 @@ tools:context=".Dashboard"
 
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/gallery">
+                        android:src="@drawable/image_gallery_svgrepo_com">
 
                     </ImageView>
 
