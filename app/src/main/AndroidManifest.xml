@@ -13,22 +13,23 @@
         android:theme="@style/Theme.EasyFarm"
         tools:targetApi="31">
         <activity
+            android:name=".result"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".password_updated"
             android:exported="true"
             android:theme="@style/AppThemeFullScreenMaterial">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".new_password"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/AppThemeFullScreenMaterial">
             <meta-data
                 android:name="android.app.lib_name"
@@ -38,8 +39,6 @@
             android:name=".verification"
             android:exported="true"
             android:theme="@style/AppThemeFullScreenMaterial">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -64,6 +63,14 @@
             android:name=".login"
             android:exported="true"
             android:theme="@style/AppThemeFullScreenMaterial">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -72,6 +79,12 @@
             android:name=".Dashboard"
             android:exported="true"
             android:theme="@style/AppThemeFullScreenMaterial">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

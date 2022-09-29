@@ -33,13 +33,14 @@ tools:context=".Dashboard"
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:padding="1dp">
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
+                app:cardCornerRadius="0dp"
                 android:backgroundTint="#329962"
                 android:clickable="true">
 
@@ -51,8 +52,8 @@ tools:context=".Dashboard"
 
                     <ImageView
 
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:src="@drawable/camera">
 
                     </ImageView>
@@ -66,7 +67,7 @@ tools:context=".Dashboard"
                         android:lineSpacingExtra="24sp"
                         android:fontFamily="@font/ralewayblack"
                         android:textColor="#fff"
-                        android:textSize="50dp">
+                        android:textSize="40dp">
 
                     </TextView>
 
@@ -80,12 +81,13 @@ tools:context=".Dashboard"
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="3">
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
+                app:cardCornerRadius="0dp"
                 android:backgroundTint="#fe6e35"
                 android:clickable="true">
 
@@ -97,8 +99,8 @@ tools:context=".Dashboard"
 
                     <ImageView
 
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:src="@drawable/gallery">
 
                     </ImageView>
@@ -112,9 +114,54 @@ tools:context=".Dashboard"
                         android:lineSpacingExtra="24sp"
                         android:fontFamily="@font/ralewayblack"
                         android:textColor="#fff"
-                        android:textSize="50dp">
+                        android:textSize="40dp">
 
                     </TextView>
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="0dp"
+                android:backgroundTint="#393838"
+                android:clickable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/menu_svgrepo_com">
+                    </ImageView>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Menu"
+                        android:layout_marginBottom="3dp"
+                        android:fontFamily="@font/ralewaybold"
+                        android:textColor="#fff"
+                        android:textSize="20dp">
+                    </TextView>
+
 
                 </LinearLayout>
 
