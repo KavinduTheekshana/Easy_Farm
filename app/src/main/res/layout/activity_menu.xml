@@ -96,6 +96,7 @@
                     android:clickable="true">
 
                     <LinearLayout
+                        android:id="@+id/privous"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
@@ -212,6 +213,7 @@ android:layout_marginTop="-15dp"
 
 
                     <LinearLayout
+                        android:id="@+id/logout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"

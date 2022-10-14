@@ -8,13 +8,15 @@ tools:context=".Dashboard"
     android:gravity="center"
     android:orientation="vertical"
     android:background="#f4f5f9"
+
     android:backgroundTint="#f4f5f9">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="4"
+        android:layout_marginTop="20dp"
         android:gravity="center">
 
         <ImageView
@@ -25,10 +27,10 @@ tools:context=".Dashboard"
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:padding="20dp"
-        android:layout_weight="5"
-        android:orientation="vertical">
+        android:layout_height="441dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:padding="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,20 +42,22 @@ tools:context=".Dashboard"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                app:cardCornerRadius="0dp"
                 android:backgroundTint="#329962"
-                android:clickable="true">
+                android:clickable="true"
+                app:cardCornerRadius="0dp">
 
                 <LinearLayout
+                    android:id="@+id/capture"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
 
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:id="@+id/image"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
                         android:src="@drawable/camera_svgrepo_com">
 
                     </ImageView>
@@ -61,13 +65,13 @@ tools:context=".Dashboard"
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Camera"
-
-                        android:lineSpacingMultiplier="0"
-                        android:lineSpacingExtra="24sp"
                         android:fontFamily="@font/ralewayblack"
+android:lineHeight="0dp"
+                        android:lineSpacingExtra="24sp"
+                        android:lineSpacingMultiplier="0"
+                        android:text="Capture"
                         android:textColor="#fff"
-                        android:textSize="40dp">
+                        android:textSize="50dp">
 
                     </TextView>
 
@@ -87,36 +91,42 @@ tools:context=".Dashboard"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                app:cardCornerRadius="0dp"
                 android:backgroundTint="#fe6e35"
-                android:clickable="true">
+                android:clickable="true"
+                app:cardCornerRadius="0dp">
 
                 <LinearLayout
+                    android:id="@+id/getresult"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <ImageView
-
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/image_gallery_svgrepo_com">
-
-                    </ImageView>
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Gallery"
-
-                        android:lineSpacingMultiplier="0"
-                        android:lineSpacingExtra="24sp"
                         android:fontFamily="@font/ralewayblack"
-                        android:textColor="#fff"
-                        android:textSize="40dp">
+                        android:gravity="center"
+                        android:text="Click for get Results"
+                       android:textColor="#fff"
+                        android:textSize="46dp">
 
                     </TextView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/ralewayblack"
+                        android:lineHeight="0dp"
+                        android:text="Save Result"
+                        android:visibility="gone"
+                        android:backgroundTint="#329962"
+                        app:cornerRadius="0dp">
+
+                    </com.google.android.material.button.MaterialButton>
 
                 </LinearLayout>
 
@@ -134,33 +144,32 @@ tools:context=".Dashboard"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                app:cardCornerRadius="0dp"
                 android:backgroundTint="#393838"
-                android:clickable="true">
+                android:clickable="true"
+                app:cardCornerRadius="0dp">
 
                 <LinearLayout
+                    android:id="@+id/menu"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginRight="10dp"
-                        android:src="@drawable/menu_svgrepo_com">
-                    </ImageView>
+                        android:src="@drawable/menu_svgrepo_com"></ImageView>
 
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Menu"
                         android:layout_marginBottom="3dp"
                         android:fontFamily="@font/ralewaybold"
+                        android:text="Menu"
                         android:textColor="#fff"
-                        android:textSize="20dp">
-                    </TextView>
+                        android:textSize="20dp"></TextView>
 
 
                 </LinearLayout>
@@ -171,16 +180,11 @@ tools:context=".Dashboard"
         </LinearLayout>
 
 
-
-
-
-
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_height="150dp"
         android:layout_gravity="bottom">
         <ImageView
             android:layout_width="match_parent"
