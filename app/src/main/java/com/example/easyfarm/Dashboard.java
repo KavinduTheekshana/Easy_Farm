@@ -55,7 +55,7 @@ public class Dashboard extends AppCompatActivity {
     LinearLayout layout2;
     LinearLayout layout3;
     ImageView imageView;
-    Button button;
+//    Button button;
     String respond;
     String status;
     DatabaseReference reference;
@@ -70,29 +70,29 @@ public class Dashboard extends AppCompatActivity {
         layout1 = (LinearLayout) findViewById(R.id.capture);
         layout2 = (LinearLayout) findViewById(R.id.getresult);
         layout3 = (LinearLayout) findViewById(R.id.menu);
-        button = (Button) findViewById(R.id.save);
+//        button = (Button) findViewById(R.id.save);
         imageView = findViewById(R.id.image);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                reference = FirebaseDatabase.getInstance().getReference("OutputDetails");
-                String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
-                String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
-
-                String key = reference.push().getKey();
-                OutputDetails outputDetails = new OutputDetails(key,respond,status,currentDate,currentTime);
-                reference.child(key).setValue(outputDetails);
-
-                Toast.makeText(Dashboard.this, "Saved Successfully", Toast.LENGTH_SHORT).show();
-
-            }
-        });
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                reference = FirebaseDatabase.getInstance().getReference("OutputDetails");
+//                String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+//                String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
+//
+//                String key = reference.push().getKey();
+//                OutputDetails outputDetails = new OutputDetails(key,respond,status,currentDate,currentTime);
+//                reference.child(key).setValue(outputDetails);
+//
+//                Toast.makeText(Dashboard.this, "Saved Successfully", Toast.LENGTH_SHORT).show();
+//
+//            }
+//        });
 
         layout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                button.setVisibility(View.INVISIBLE);
+//                button.setVisibility(View.INVISIBLE);
                 showPictureDialog();
             }
         });
@@ -196,58 +196,91 @@ public class Dashboard extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
 
-            if (respond != null){
-                button.setVisibility(View.VISIBLE);
-            }
+//            if (respond != null){
+//                button.setVisibility(View.VISIBLE);
+//            }
 
-            if(respond == "0"){
+            if(Objects.equals(respond, "0")){
 
                 AlertDialog.Builder builder1 = new AlertDialog.Builder(Dashboard.this);
-                builder1.setMessage("Health potato. Image is "+status+"");
+                builder1.setTitle("Health potato");
+                builder1.setMessage("Image is "+status+"" + "\n\n" +"Your Plant is Healthy. No need get any actions");
                 builder1.setCancelable(true);
 
                 builder1.setPositiveButton(
                         "OK",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
+                                reference = FirebaseDatabase.getInstance().getReference("OutputDetails");
+                                String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+                                String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
+
+                                String key = reference.push().getKey();
+                                OutputDetails outputDetails = new OutputDetails(key,"Health potato",status,currentDate,currentTime);
+                                reference.child(key).setValue(outputDetails);
+
+                                Toast.makeText(Dashboard.this, "Saved Successfully", Toast.LENGTH_SHORT).show();
+
                                 dialog.cancel();
                             }
                         });
                 AlertDialog alert11 = builder1.create();
                 alert11.show();
 
-            }else if (respond == "1"){
+            }else if (Objects.equals(respond, "1")){
                 AlertDialog.Builder builder1 = new AlertDialog.Builder(Dashboard.this);
-                builder1.setMessage("Early blight. Image is "+status+"");
+                builder1.setTitle("Early blight");
+                builder1.setMessage("Image is "+status+"" + "\n\n" +"Treatment of early blight includes prevention by planting potato varieties that are resistant to the disease; late maturing ones are more resistant than early maturing varieties. Avoid overhead irrigation and allow for sufficient aeration between plants to allow the foliage to dry as quickly as possible. Practice a two year crop rotation. That is, do not replant potatoes or other crops in this family for two years after a potato crop has been harvested. Keep the potato plants healthy and stress free by providing adequate nutrition and sufficient irrigation, especially later in the growing season after flowering when plants are most susceptible to the disease. Only dig the tubers up when they are completely mature to prevent damaging them. Any damage done at harvest can additionally facilitate the disease.");
                 builder1.setCancelable(true);
 
                 builder1.setPositiveButton(
                         "OK",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
+                                reference = FirebaseDatabase.getInstance().getReference("OutputDetails");
+                                String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+                                String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
+
+                                String key = reference.push().getKey();
+                                OutputDetails outputDetails = new OutputDetails(key,"Early blight",status,currentDate,currentTime);
+                                reference.child(key).setValue(outputDetails);
+
+                                Toast.makeText(Dashboard.this, "Saved Successfully", Toast.LENGTH_SHORT).show();
+
                                 dialog.cancel();
                             }
                         });
                 AlertDialog alert11 = builder1.create();
                 alert11.show();
-            }else if(respond == "2"){
+            }else if(Objects.equals(respond, "2")){
                 AlertDialog.Builder builder1 = new AlertDialog.Builder(Dashboard.this);
-                builder1.setMessage("Late blight. Image is "+status+"");
+                builder1.setTitle("Late blight");
+                builder1.setMessage("Image is "+status+"" + "\n\n" +"Practice safe control methods to prevent late blight, such as practicing regular crop rotation, never planting tomatoes in the same location that tomatoes or potatoes were grown in the last two growing seasons. Plant resistant cultivars whenever possible. Remove all volunteer potato and tomato plants that sprout up in between seasons. Space all tomato plants out far enough from each other to allow for plenty of air circulation to help plants dry out faster when they get wet. When watering, try to perform the task in the early morning hours so that plants have a chance to dry out before the warmest part of the day. Try to avoid overhead watering methods, which get the stems and foliage of the plant’s leaves wet, opting instead for direct soil watering techniques, such as using drip irrigation, or soaker hoses. After harvesting, destroy and completely remove all tomato and potato plant debris immediately. Do not compost infected plants.\n" +
+                        "\n");
                 builder1.setCancelable(true);
 
                 builder1.setPositiveButton(
                         "OK",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
+                                reference = FirebaseDatabase.getInstance().getReference("OutputDetails");
+                                String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+                                String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
+
+                                String key = reference.push().getKey();
+                                OutputDetails outputDetails = new OutputDetails(key,"Late blight",status,currentDate,currentTime);
+                                reference.child(key).setValue(outputDetails);
+
+                                Toast.makeText(Dashboard.this, "Saved Successfully", Toast.LENGTH_SHORT).show();
+
+
                                 dialog.cancel();
                             }
                         });
                 AlertDialog alert11 = builder1.create();
                 alert11.show();
             }
-            else {
-                Toast.makeText(Dashboard.this, "Backend Connection Error", Toast.LENGTH_SHORT).show();
-            }
+
 
 
         }

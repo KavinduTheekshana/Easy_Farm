@@ -113,20 +113,20 @@ android:lineHeight="0dp"
 
                     </TextView>
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/save"
-                        android:layout_width="wrap_content"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="12dp"
-                        android:textColor="@color/white"
-                        android:fontFamily="@font/ralewayblack"
-                        android:lineHeight="0dp"
-                        android:text="Save Result"
-                        android:visibility="gone"
-                        android:backgroundTint="#329962"
-                        app:cornerRadius="0dp">
+<!--                    <com.google.android.material.button.MaterialButton-->
+<!--                        android:id="@+id/save"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:layout_marginTop="12dp"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:fontFamily="@font/ralewayblack"-->
+<!--                        android:lineHeight="0dp"-->
+<!--                        android:text="Save Result"-->
+<!--                        android:visibility="gone"-->
+<!--                        android:backgroundTint="#329962"-->
+<!--                        app:cornerRadius="0dp">-->
 
-                    </com.google.android.material.button.MaterialButton>
+<!--                    </com.google.android.material.button.MaterialButton>-->
 
                 </LinearLayout>
 
